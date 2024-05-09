@@ -135,6 +135,7 @@ class LabelList: # should've been named segment in hindsight...
             l = self.labels[i]
             if l.phone in lang['vowels']:
                 prev_l = self.labels[i-1]
+                print("lang['liquids']", lang['liquids'])
                 if prev_l.phone in lang['liquids'].keys(): # check liquids before vowel.
                     # if the value for the liquid is true, move position for any consonant, else, move position for specified consonants.
                     liquid = lang['liquids'][prev_l.phone]
